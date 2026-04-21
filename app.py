@@ -3,14 +3,14 @@ from flask_cors import CORS
 import requests
 import os
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__, static_folder='/app', static_url_path='')
 CORS(app)
 
 SLEEPER = "https://api.sleeper.app/v1"  # v2
 
 @app.route("/")
 def index():
-    return send_from_directory('.', 'index.html')
+    return send_from_directory('/app', 'index.html')
 
 @app.route("/user/<username>")
 def get_user(username):
