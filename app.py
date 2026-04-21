@@ -6,7 +6,7 @@ import os
 app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
 
-SLEEPER = "https://api.sleeper.app/v1"
+SLEEPER = "https://api.sleeper.app/v1"  # v2
 
 @app.route("/")
 def index():
